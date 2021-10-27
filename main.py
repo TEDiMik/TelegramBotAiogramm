@@ -9,6 +9,7 @@ with open("token.txt",encoding='utf-8',mode='r') as token:
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
+
 @dp.message_handler(commands=["start","help"])
 async def send_welcome(msg: types.Message):
     await msg.reply("Я бот. Приятно познакомиться, {msg.from_user.first_name}")
